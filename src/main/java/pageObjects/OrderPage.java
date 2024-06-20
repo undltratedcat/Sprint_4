@@ -3,16 +3,15 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.Select;
 
 public class OrderPage extends CorePage{
 
-    private By firstNameInputLocartor = By.xpath("//input[@placeholder = '* Имя']");
-    private By secondNameInputLocartor = By.xpath("//input[@placeholder = '* Фамилия']");
-    private By addressInputLocartor = By.xpath("//input[@placeholder = '* Адрес: куда привезти заказ']");
-    private By metroStationInputLocartor = By.className("select-search__input");
-    private By telephoneInputLocartor = By.xpath("//input[@placeholder = '* Телефон: на него позвонит курьер']");
-    private By continueButtonLocartor = By.className("Button_Middle__1CSJM");
+    private final By firstNameInputLocartor = By.xpath("//input[@placeholder = '* Имя']");
+    private final By secondNameInputLocartor = By.xpath("//input[@placeholder = '* Фамилия']");
+    private final By addressInputLocartor = By.xpath("//input[@placeholder = '* Адрес: куда привезти заказ']");
+    private final By metroStationInputLocartor = By.className("select-search__input");
+    private final By telephoneInputLocartor = By.xpath("//input[@placeholder = '* Телефон: на него позвонит курьер']");
+    private final By continueButtonLocartor = By.className("Button_Middle__1CSJM");
 
 
 

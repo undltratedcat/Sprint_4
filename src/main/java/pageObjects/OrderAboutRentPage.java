@@ -6,11 +6,9 @@ import org.openqa.selenium.WebDriver;
 
 public class OrderAboutRentPage extends CorePage{
     //Локатор даты аренды
-    private By rentDateInputLocator = By.xpath(".//input[@placeholder ='* Когда привезти самокат']");
+    private final By rentDateInputLocator = By.xpath(".//input[@placeholder ='* Когда привезти самокат']");
     //локатор срока аренды
-    private By rentTermInputLocator = By.className("Dropdown-arrow");
-    //Тескт для запуска скрипта, для выбора срока аренды
-    private String rentTermDropdown = "document.getElementsByClassName('Dropdown-option')[%d].click()";
+    private final By rentTermInputLocator = By.className("Dropdown-arrow");
     //Локатор комментария для курьера
     private By commentForCourierInputLocator = By.xpath(".//input[@placeholder ='Комментарий для курьера']");
     //Тескт для запуска скрипта, для выбора цвета
@@ -33,6 +31,8 @@ public class OrderAboutRentPage extends CorePage{
 
     private void selectRentTerm(int id){
         driver.findElement(rentTermInputLocator).click();
+        //Тескт для запуска скрипта, для выбора срока аренды
+        String rentTermDropdown = "document.getElementsByClassName('Dropdown-option')[%d].click()";
         ((JavascriptExecutor) driver)
                 .executeScript(String.format(rentTermDropdown, id));
 

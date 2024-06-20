@@ -35,6 +35,6 @@ public class HomePageFAQTest extends CoreTest{
     public void accordationTest(){
         HomePageFAQ mainPageFAQ = new HomePageFAQ(driver);
         String actualText = mainPageFAQ.getTextFromAccordion(accoradionNumber);
-        Assert.assertEquals("Текст не равен ожидаемому", expectedText, actualText);
+        Assert.assertEquals("Текст не соответствует ожидаемому", expectedText, actualText);
     }
 }

@@ -48,7 +48,7 @@ public class OrderTest extends CoreTest{
         OrderPage orderPage = mainPage.clickOnOrderButton(isInHeaderButton);
         OrderAboutRentPage orderAboutRentPage = orderPage.fillOrderDetails(name, secondName,address,metro,phone);
         orderAboutRentPage.order(rentDate, rentTermID,colorID,courierComment);
-        Assert.assertTrue("Ожидалось, что заказ оформлен", orderAboutRentPage.isOrderProcessed());
+        Assert.assertTrue("Ожидалось оформление заказа", orderAboutRentPage.isOrderProcessed());
 
     }
 }

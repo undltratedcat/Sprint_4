@@ -10,10 +10,6 @@ import java.time.Duration;
 
 
 public class HomePageFAQ extends CorePage{
-    //Текст для локатора панели
-    private final String textForPanelLocator = "#accordion__heading-%d";
-    //Текст для локатора текста, открывшегося при нажатии на панель
-    private final String textForTextLocator = "#accordion__panel-%d > p";
 
 
     public HomePageFAQ(WebDriver driver) {
@@ -24,8 +20,12 @@ public class HomePageFAQ extends CorePage{
 
     public String getTextFromAccordion(int accordionNumber){
         //Локатор панели
+        //Текст для локатора панели
+        String textForPanelLocator = "#accordion__heading-%d";
         By panelLocator = By.cssSelector(String.format(textForPanelLocator, accordionNumber));
         //Локатор текста
+        //Текст для локатора текста, открывшегося при нажатии на панель
+        String textForTextLocator = "#accordion__panel-%d > p";
         By textLocator = By.cssSelector(String.format(textForTextLocator, accordionNumber));
         WebElement element = driver.findElement(panelLocator);
 
